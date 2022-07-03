@@ -101,3 +101,11 @@ const sightWords = [
   'purple',
   'because'
 ]
+//Choosing the word from the sight words
+let word = sightWords[Math.floor(Math.random() * words.length)]
+// generating the mystery word
+let answerArray = []
+for (i = 0; i < word.length; i++) {
+  answerArray[i] = '_'
+}
+let remainingLetters = word.length
