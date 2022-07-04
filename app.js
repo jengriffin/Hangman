@@ -101,11 +101,23 @@ const sightWords = [
   'purple',
   'because'
 ]
+//get word button
+const getWordbtn = document.getElementById('btnword')
+
 //Choosing the word from the sight words
-let word = sightWords[Math.floor(Math.random() * words.length)]
+let word = sightWords[Math.floor(Math.random() * sightWords.length)]
+console.log(word)
 // generating the mystery word
-let answerArray = []
-for (i = 0; i < word.length; i++) {
-  answerArray[i] = '_'
+let answerArray = document
+let randomWord = () => {
+  let answerArray = []
+  for (i = 0; i < word.length; i++) {
+    answerArray[i] = '_'
+  }
+  let remainingLetters = word.length
 }
-let remainingLetters = word.length
+
+const addText = () => {
+  document.body.append('It seems as if it has been clicked!')
+}
+getWordbtn.addEventListener('click', randomWord)
