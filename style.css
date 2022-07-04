@@ -1,9 +1,17 @@
 *{
   font-family: 'Architects Daughter', cursive;
   background-color:rgb(130,182,255);
+  font-size: large;
 }
 h1{
   text-align: center;
+  font-size: x-large;
+}
+.keyboard{
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between 
+
 }
 .container{
   width: 30vw;
@@ -11,6 +19,7 @@ h1{
   display: block;
   position: relative;
   background-color: 	#ff5994;
+  margin-left: 20vw;
 }
 #head{
 width: 100px;
@@ -70,4 +79,10 @@ width: 100px;
   top: 335px;
   left: 190px;
   transform: rotate(50deg);
+}
+.answerArray {
+	margin: 0 auto;
+	width: 400px;
+	display: flex;
+	justify-content: space-around;
 }
