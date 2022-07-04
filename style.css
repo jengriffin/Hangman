@@ -10,13 +10,22 @@ h1{
 .keyboard{
   display: flex;
   flex-direction: row; 
-  justify-content: space-between 
+  justify-content: space-between;
+  background-color: 	#edff8f; 
+  font-style: 	#ff5994;
 
+}
+.answerArray{
+  background-color: #edff8f;
+  width: 30vw;
+  height: 50vh;
+  margin-left: 40vw;
+  display: inline
 }
 .container{
   width: 30vw;
   height: 70vh;
-  display: block;
+  display: inline;
   position: relative;
   background-color: 	#ff5994;
   margin-left: 20vw;

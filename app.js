@@ -106,16 +106,15 @@ const getWordbtn = document.getElementById('btnword')
 
 //Choosing the word from the sight words
 let word = sightWords[Math.floor(Math.random() * sightWords.length)]
-console.log(word)
+
 // generating the mystery word
 let answerArray = document.getElementsByClassName('answerArray')
-let gameNum = 0
+let underscore = []
 let randomWord = () => {
-  answerArray.innerhtml = ''
-  for (let i = 1; i <= word.length; i++) {
-    answerArray.append = '_'
+  for (let i = 0; i <= word.length; i++) {
+    underscore.push('_')
   }
-  gameNum++
+  return underscore
   // let answerArray = []
   // for (i = 0; i < word.length; i++) {
   //   answerArray.append = '_'
@@ -123,8 +122,9 @@ let randomWord = () => {
   // let remainingLetters = word.length
   // answer.innerhtml = answerArray[i]
 }
-console.log(randomWord)
+console.log(randomWord())
 // const addText = () => {
 //   document.body.append('It seems as if it has been clicked!')
 // }
+randomWord()
 getWordbtn.addEventListener('click', randomWord)
