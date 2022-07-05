@@ -106,43 +106,48 @@ let correctWord = []
 let wrongWord = []
 let underscore = []
 let answerArray = document.getElementsByClassName('answerArray')
+let word
 
 //get word button
 const getWordbtn = document.getElementById('btnword')
 
 //Choosing the word from the sight words
-let word = sightWords[Math.floor(Math.random() * sightWords.length)]
-console.log(word)
+
 // generating the mystery word
 
 let randomWord = () => {
+  word = sightWords[Math.floor(Math.random() * sightWords.length)]
   for (let i = 0; i < word.length; i++) {
     underscore.push('_')
   }
+  console.log(word)
+  console.log(underscore)
   return underscore
 }
-answerArray[0].innerHTML = randomWord().join(' ')
+// answerArray[0].innerHTML = randomWord().join(' ')
 
 // const addText = () => {
 //   document.body.append('It seems as if it has been clicked!')
 // }
-randomWord()
+// randomWord()
+
 getWordbtn.addEventListener('click', randomWord)
+
 //run game with keystrokes
 document.addEventListener('keypress', (event) => {
   let key = String.fromCharCode(event.keyCode)
   ///if guess right
 
   if (word.indexOf(key) > -1) {
+    console.log(underscore)
     correctWord.push(key)
     console.log(correctWord)
     underscore[word.indexOf(key)] = key
-
+    answerArray[0].innerHTML = underscore.join(' ')
     if (underscore.join('') === word) {
       return confirm('You win! Want to play again?')
     }
 
-    // answerArray[0].innerHTML = randomWord().join(' ')
     // console.log(underscore)
     //
     // }
