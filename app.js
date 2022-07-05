@@ -101,17 +101,21 @@ const sightWords = [
   'purple',
   'because'
 ]
+//global variables
+let correctWord = []
+let wrongWord = []
+let underscore = []
 //get word button
 const getWordbtn = document.getElementById('btnword')
 
 //Choosing the word from the sight words
 let word = sightWords[Math.floor(Math.random() * sightWords.length)]
-
+console.log(word)
 // generating the mystery word
 let answerArray = document.getElementsByClassName('answerArray')
-let underscore = []
+
 let randomWord = () => {
-  for (let i = 0; i <= word.length; i++) {
+  for (let i = 0; i < word.length; i++) {
     underscore.push('_')
   }
   return underscore
@@ -122,9 +126,27 @@ let randomWord = () => {
   // let remainingLetters = word.length
   // answer.innerhtml = answerArray[i]
 }
+answerArray[0].innerHTML = randomWord().join(' ')
 console.log(randomWord())
 // const addText = () => {
 //   document.body.append('It seems as if it has been clicked!')
 // }
 randomWord()
 getWordbtn.addEventListener('click', randomWord)
+document.addEventListener('keypress', (event) => {
+  let key = String.fromCharCode(event.keyCode)
+  ///if guess right
+  if (word.indexOf(key) > -1) {
+    correctWord.push(key)
+    console.log(correctWord)
+    underscore[word.indexOf(key)] = key
+    underscore[0].innerHTML = underscore.join(' ')
+    console.log(underscore)
+    if (underscore.join('') === key) {
+      alert('Winner!')
+    }
+  } else {
+    wrongWord.push(key)
+    console.log(wrongWord)
+  }
+})
