@@ -101,7 +101,6 @@ const sightWords = [
   'purple',
   'because'
 ]
-//global variables
 let correctWord = []
 let wrongWord = []
 let underscore = []
@@ -124,12 +123,7 @@ let randomWord = () => {
   console.log(underscore)
   return underscore
 }
-// answerArray[0].innerHTML = randomWord().join(' ')
-
-// const addText = () => {
-//   document.body.append('It seems as if it has been clicked!')
-// }
-// randomWord()
+answerArray[0].innerHTML = randomWord().join(' ')
 
 getWordbtn.addEventListener('click', randomWord)
 
@@ -148,12 +142,12 @@ document.addEventListener('keypress', (event) => {
       return confirm('You win! Want to play again?')
     }
 
-    // console.log(underscore)
-    //
     // }
   } else {
     wrongWord.push(key)
     console.log(wrongWord)
   }
 })
-//
+// proof of js editing css
+// let circle = document.getElementById('head')
+// circle.style.backgroundColor = '#9CAF88'
