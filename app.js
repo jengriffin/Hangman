@@ -146,7 +146,7 @@ document.addEventListener('click', (event) => {
       return confirm('You win! Want to play again?')
     }
 
-    // }
+    // draw hangman
   } else {
     wrongWord.push(letter)
     console.log(wrongWord)
@@ -167,7 +167,7 @@ document.addEventListener('click', (event) => {
     }
     if (wrongWord.length === 6) {
       rightleg.style.display = 'inline'
-      document.getElementsByClassName('keyboard').innerHTML = 'You Lost!!!'
+      return confirm('Wanna try again?')
     }
   }
 })
@@ -207,7 +207,9 @@ document.addEventListener('keypress', (event) => {
     }
     if (wrongWord.length === 6) {
       rightleg.style.display = 'inline'
-      document.getElementsByClassName('keyboard').innerHTML = 'You Lost!!!'
+      let div = document.createElement('div')
+      div.innerHTML = 'Try again!'
+      return document.getElementsByClassName('answerArray').appendChild('div')
     }
   }
 })
