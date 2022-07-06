@@ -137,7 +137,8 @@ getUnderscorse()
 getWordbtn.addEventListener('click', getUnderscorse)
 //run game with click
 document.addEventListener('click', (event) => {
-  let letter = String.fromCharCode(event.click)
+  let letter = event.target.id.toLowerCase()
+  console.log(event)
   ///if guess right
 
   if (word.indexOf(letter) > -1) {
