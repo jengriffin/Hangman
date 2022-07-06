@@ -104,6 +104,7 @@ const sightWords = [
 let correctWord = []
 let wrongWord = []
 let underscore = []
+let gameLose = 6
 let answerArray = document.getElementsByClassName('answerArray')
 let word
 let circle = document.getElementById('head')
@@ -129,9 +130,47 @@ let randomWord = () => {
   return underscore
 }
 answerArray[0].innerHTML = randomWord().join(' ')
+// getWordbtn.addEventListener('click', randomWord)
+//run key with click
+document.addEventListener('click', (event) => {
+  let letter = String.fromCharCode(event.click)
+  ///if guess right
 
-getWordbtn.addEventListener('click', randomWord)
+  if (word.indexOf(letter) > -1) {
+    console.log(underscore)
+    correctWord.push(letter)
+    console.log(correctWord)
+    underscore[word.indexOf(letter)] = letter
+    answerArray[0].innerHTML = underscore.join(' ')
+    if (underscore.join('') === word) {
+      return confirm('You win! Want to play again?')
+    }
 
+    // }
+  } else {
+    wrongWord.push(letter)
+    console.log(wrongWord)
+    if (wrongWord.length === 1) {
+      circle.style.display = 'inline'
+    }
+    if (wrongWord.length === 2) {
+      torso.style.display = 'inline'
+    }
+    if (wrongWord.length === 3) {
+      leftarm.style.display = 'inline'
+    }
+    if (wrongWord.length === 4) {
+      rightarm.style.display = 'inline'
+    }
+    if (wrongWord.length === 5) {
+      leftleg.style.display = 'inline'
+    }
+    if (wrongWord.length === 6) {
+      rightleg.style.display = 'inline'
+      document.getElementsByClassName('keyboard').innerHTML = 'You Lost!!!'
+    }
+  }
+})
 //run game with keystrokes
 document.addEventListener('keypress', (event) => {
   let key = String.fromCharCode(event.keyCode)
@@ -168,6 +207,7 @@ document.addEventListener('keypress', (event) => {
     }
     if (wrongWord.length === 6) {
       rightleg.style.display = 'inline'
+      document.getElementsByClassName('keyboard').innerHTML = 'You Lost!!!'
     }
   }
 })

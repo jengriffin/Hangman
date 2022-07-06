@@ -36,4 +36,10 @@ This hangman game will be structured to support early literacy skills such as ca
 
 #### **Markdown Guide:[GitHub](https://github.com/jengriffin/u1_hw_markdown)**
 
-#### **Markdown Cheatsheet[GitHub](https://github.com/jengriffin/u1_hw_markdown)**
+#### **Keystroke log and indexOf:(https://www.youtube.com/watch?v=f5BbzXgvi1o)**
+
+#### **indexOf:(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)**
+
+#### **string.fromCharCode:(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode)**
+
+#### **stickfigure CSS:(https://css-tricks.com/the-shapes-of-css/)**
