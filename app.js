@@ -106,7 +106,12 @@ let wrongWord = []
 let underscore = []
 let answerArray = document.getElementsByClassName('answerArray')
 let word
-
+let circle = document.getElementById('head')
+let torso = document.getElementById('torso')
+let leftarm = document.getElementById('leftarm')
+let rightarm = document.getElementById('rightarm')
+let leftleg = document.getElementById('leftleg')
+let rightleg = document.getElementById('rightleg')
 //get word button
 const getWordbtn = document.getElementById('btnword')
 
@@ -146,8 +151,23 @@ document.addEventListener('keypress', (event) => {
   } else {
     wrongWord.push(key)
     console.log(wrongWord)
+    if (wrongWord.length === 1) {
+      circle.style.display = 'inline'
+    }
+    if (wrongWord.length === 2) {
+      torso.style.display = 'inline'
+    }
+    if (wrongWord.length === 3) {
+      leftarm.style.display = 'inline'
+    }
+    if (wrongWord.length === 4) {
+      rightarm.style.display = 'inline'
+    }
+    if (wrongWord.length === 5) {
+      leftleg.style.display = 'inline'
+    }
+    if (wrongWord.length === 6) {
+      rightleg.style.display = 'inline'
+    }
   }
 })
-// proof of js editing css
-// let circle = document.getElementById('head')
-// circle.style.backgroundColor = '#9CAF88'

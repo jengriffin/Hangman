@@ -19,10 +19,16 @@ h1{
 }
 .answerArray{
   background-color: #edff8f;
-  width: 30vw;
-  height: 50vh;
+  width: 300px;
+  height: 500px;
   margin-left: 40vw;
   display: inline
+}
+.keyboard {
+	margin: 0 auto;
+	width: 400px;
+	display: flex;
+	justify-content: space-around;
 }
 .container{
   width: 30vw;
@@ -41,6 +47,7 @@ width: 100px;
   position: absolute;
   top: 100px;
   left: 156px;
+  display: none;
 }
 #torso{
   width: 6px;
@@ -50,6 +57,7 @@ width: 100px;
   position: absolute;
   top: 200px;
   left: 200px;
+  display: none;
 }
 #leftarm{
   width: 100px;
@@ -60,6 +68,7 @@ width: 100px;
   top: 230px;
   left: 100px;
   transform: rotate(-20deg);
+  display: none;
 }
 #rightarm{
   width: 100px;
@@ -70,6 +79,7 @@ width: 100px;
   top: 230px;
   left: 200px;
   transform: rotate(20deg);
+  display: none;
 }
 #leftleg{
   width: 100px;
@@ -80,6 +90,7 @@ width: 100px;
   top: 335px;
   left: 120px;
   transform: rotate(-50deg);
+  display: none;
 }
 #rightleg{
   width: 100px;
@@ -90,10 +101,5 @@ width: 100px;
   top: 335px;
   left: 190px;
   transform: rotate(50deg);
-}
-.answerArray {
-	margin: 0 auto;
-	width: 400px;
-	display: flex;
-	justify-content: space-around;
+  display: none;
 }
