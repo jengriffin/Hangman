@@ -13,29 +13,25 @@ h1{
   display: flex;
   flex-direction: row; 
   justify-content: space-between;
-  
-  
-
-}
+  }
 .answerArray{
   background-color: #84ff9f;
-  width: 30vw;
+  width: 50vw;
   height: 50vh;
-  margin-left: 40vw;
-  display: inline
+  margin-left: 20vw;
+  display: inline;
+  font-size: 10vh;
+  border: 5px solid #ff5994;
+  border-radius: 20px;
+  padding: 
 }
-/* .keyboard {
-	margin: 0 auto;
-	width: 400px;
-	display: flex;
-	justify-content: space-around;
-} */
+
 .container{
   width: 30vw;
   height: 70vh;
   display: inline;
   position: relative;
-  background-color: 	#ff5994;
+
   margin-left: 20vw;
 }
 #head{
@@ -45,7 +41,7 @@ width: 100px;
   border-radius: 50%;
   display: block;
   position: absolute;
-  top: 100px;
+  top: 200px;
   left: 156px;
   display: none;
 }
@@ -56,7 +52,7 @@ width: 100px;
   background-color: black;
   display: block;
   position: absolute;
-  top: 200px;
+  top: 300px;
   left: 200px;
   display: none;
 }
@@ -67,7 +63,7 @@ width: 100px;
   background-color: black;
   display: block;
   position: absolute;
-  top: 230px;
+  top: 330px;
   left: 100px;
   transform: rotate(-20deg);
   display: none;
@@ -79,7 +75,7 @@ width: 100px;
   background-color: black;
   display: block;
   position: absolute;
-  top: 230px;
+  top: 330px;
   left: 200px;
   transform: rotate(20deg);
   display: none;
@@ -91,7 +87,7 @@ width: 100px;
   background-color: black;
   display: block;
   position: absolute;
-  top: 335px;
+  top: 435px;
   left: 120px;
   transform: rotate(-50deg);
   display: none;
@@ -103,8 +99,8 @@ width: 100px;
   background-color: black;
   display: block;
   position: absolute;
-  top: 335px;
-  left: 190px;
+  top: 435px;
+  left: 188px;
   transform: rotate(50deg);
   display: none;
 }
@@ -112,5 +108,13 @@ width: 100px;
   background-color: 	#edff8f; 
   border: 5px solid #ff5994;
   border-radius: 20px;
-  padding: 15px
+  padding: 15px;
+  top: 500px;
+}
+.vowel{
+  background-color: 	#ff5994; 
+  border: 5px solid #edff8f;
+  border-radius: 20px;
+  padding: 15px;
+  top: 500px;
 }

@@ -113,6 +113,7 @@ let leftarm = document.getElementById('leftarm')
 let rightarm = document.getElementById('rightarm')
 let leftleg = document.getElementById('leftleg')
 let rightleg = document.getElementById('rightleg')
+let keyboard = document.getElementsByClassName('keyboard')
 //get word button
 const getWordbtn = document.getElementById('btnword')
 
@@ -129,9 +130,12 @@ let randomWord = () => {
   console.log(underscore)
   return underscore
 }
-answerArray[0].innerHTML = randomWord().join(' ')
-// getWordbtn.addEventListener('click', randomWord)
-//run key with click
+let getUnderscorse = () => {
+  answerArray[0].innerHTML = randomWord().join(' ')
+}
+getUnderscorse()
+getWordbtn.addEventListener('click', getUnderscorse)
+//run game with click
 document.addEventListener('click', (event) => {
   let letter = String.fromCharCode(event.click)
   ///if guess right
