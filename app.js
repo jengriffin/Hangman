@@ -113,6 +113,11 @@ let rightarm = document.getElementById('rightarm')
 let leftleg = document.getElementById('leftleg')
 let rightleg = document.getElementById('rightleg')
 let keyboard = document.getElementsByClassName('keyboard')
+let gameOver = document.getElementById('gameOver')
+const a = document.createElement('a')
+const winRestartLink = document.createTextNode('You win! Play Again?')
+const loseRestartLink = document.createTextNode('Play Again?')
+a.href = 'hangman.html'
 //get word button
 const getWordbtn = document.getElementById('btnword')
 
@@ -157,10 +162,8 @@ document.addEventListener('click', (event) => {
     underscore[word.indexOf(letter)] = letter
     answerArray[0].innerHTML = underscore.join(' ')
     if (underscore.join('') === word) {
-      let restart = confirm('You win! Want to play again?')
-      if (restart === true) {
-        window.location.reload()
-      }
+      a.appendChild(winRestartLink)
+      gameOver.appendChild(a)
     }
 
     // draw hangman
@@ -184,10 +187,8 @@ document.addEventListener('click', (event) => {
     }
     if (wrongWord.length === 6) {
       rightleg.style.display = 'inline'
-      let restart = confirm('Want to play again?')
-      if (restart === true) {
-        window.location.reload()
-      }
+      a.appendChild(loseRestartLink)
+      gameOver.appendChild(a)
     }
   }
 })
@@ -203,10 +204,8 @@ document.addEventListener('keypress', (event) => {
     underscore[word.indexOf(key)] = key
     answerArray[0].innerHTML = underscore.join(' ')
     if (underscore.join('') === word) {
-      let restart = confirm('You win! Want to play again?')
-      if (restart === true) {
-        window.location.reload()
-      }
+      a.appendChild(winRestartLink)
+      gameOver.appendChild(a)
     }
 
     // }
@@ -230,10 +229,8 @@ document.addEventListener('keypress', (event) => {
     }
     if (wrongWord.length === 6) {
       rightleg.style.display = 'inline'
-      let restart = confirm('Want to play again?')
-      if (restart === true) {
-        window.location.reload()
-      }
+      a.appendChild(loseRestartLink)
+      gameOver.appendChild(a)
     }
   }
 })

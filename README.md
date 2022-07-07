@@ -43,3 +43,5 @@ This hangman game will be structured to support early literacy skills such as ca
 #### **string.fromCharCode:(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode)**
 
 #### **stickfigure CSS:(https://css-tricks.com/the-shapes-of-css/)**
+
+#### **Game reset:(https://www.codegrepper.com/code-examples/html/adding+a+refresh+button+on+the+page+using+javascript)**
