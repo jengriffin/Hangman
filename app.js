@@ -1,6 +1,5 @@
 /*Kinder sight word array*/
 const sightWords = [
-  'I',
   'a',
   'we',
   'at',
@@ -130,11 +129,14 @@ let randomWord = () => {
   console.log(underscore)
   return underscore
 }
-let getUnderscorse = () => {
+let getUnderscores = () => {
   answerArray[0].innerHTML = randomWord().join(' ')
 }
-getUnderscorse()
-getWordbtn.addEventListener('click', getUnderscorse)
+// let getNewWord =()=>{
+//   window.location.reload()
+// }
+getUnderscores()
+getWordbtn.addEventListener('click', getUnderscores)
 //run game with click
 document.addEventListener('click', (event) => {
   let letter = event.target.id.toLowerCase()
@@ -148,7 +150,10 @@ document.addEventListener('click', (event) => {
     underscore[word.indexOf(letter)] = letter
     answerArray[0].innerHTML = underscore.join(' ')
     if (underscore.join('') === word) {
-      return confirm('You win! Want to play again?')
+      let restart = confirm('You win! Want to play again?')
+      if (restart === true) {
+        window.location.reload()
+      }
     }
 
     // draw hangman
@@ -172,7 +177,10 @@ document.addEventListener('click', (event) => {
     }
     if (wrongWord.length === 6) {
       rightleg.style.display = 'inline'
-      return confirm('Wanna try again?')
+      let restart = confirm('Want to play again?')
+      if (restart === true) {
+        window.location.reload()
+      }
     }
   }
 })
@@ -188,7 +196,10 @@ document.addEventListener('keypress', (event) => {
     underscore[word.indexOf(key)] = key
     answerArray[0].innerHTML = underscore.join(' ')
     if (underscore.join('') === word) {
-      return confirm('You win! Want to play again?')
+      let restart = confirm('You win! Want to play again?')
+      if (restart === true) {
+        window.location.reload()
+      }
     }
 
     // }
@@ -212,9 +223,10 @@ document.addEventListener('keypress', (event) => {
     }
     if (wrongWord.length === 6) {
       rightleg.style.display = 'inline'
-      let div = document.createElement('div')
-      div.innerHTML = 'Try again!'
-      return document.getElementsByClassName('answerArray').appendChild('div')
+      let restart = confirm('Want to play again?')
+      if (restart === true) {
+        window.location.reload()
+      }
     }
   }
 })
