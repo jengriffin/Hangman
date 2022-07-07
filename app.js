@@ -131,7 +131,6 @@ let randomWord = () => {
   return underscore
 }
 let getUnderscores = () => {
-  console.log('HELLO!')
   answerArray[0].innerHTML = randomWord().join(' ')
 }
 // let getNewWord = () => {
