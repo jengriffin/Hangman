@@ -121,6 +121,7 @@ const getWordbtn = document.getElementById('btnword')
 // generating the mystery word
 
 let randomWord = () => {
+  underscore = []
   word = sightWords[Math.floor(Math.random() * sightWords.length)]
   for (let i = 0; i < word.length; i++) {
     underscore.push('_')
@@ -130,9 +131,10 @@ let randomWord = () => {
   return underscore
 }
 let getUnderscores = () => {
+  console.log('HELLO!')
   answerArray[0].innerHTML = randomWord().join(' ')
 }
-// let getNewWord =()=>{
+// let getNewWord = () => {
 //   window.location.reload()
 // }
 getUnderscores()
@@ -140,6 +142,10 @@ getWordbtn.addEventListener('click', getUnderscores)
 //run game with click
 document.addEventListener('click', (event) => {
   let letter = event.target.id.toLowerCase()
+  if (letter === getWordbtn.id.toLowerCase()) {
+    getUnderscores()
+    return
+  }
   console.log(event)
   ///if guess right
 
