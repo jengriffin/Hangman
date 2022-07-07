@@ -104,6 +104,14 @@ width: 100px;
   transform: rotate(50deg);
   display: none;
 }
+.guessed{
+  background-color: 	#84ff9f;
+  border: 5px solid #ff9668;
+  border-radius: 20px;
+  padding: 15px;
+  top: 500px;
+  text-decoration: line-through;
+}
 .consonant{
   background-color: 	#edff8f; 
   border: 5px solid #ff5994;

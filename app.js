@@ -146,6 +146,7 @@ document.addEventListener('click', (event) => {
     getUnderscores()
     return
   }
+  event.target.setAttribute('class', 'guessed')
   console.log(event)
   ///if guess right
 
@@ -153,6 +154,7 @@ document.addEventListener('click', (event) => {
     console.log(underscore)
     correctWord.push(letter)
     console.log(correctWord)
+    //TODO: fix
     underscore[word.indexOf(letter)] = letter
     answerArray[0].innerHTML = underscore.join(' ')
     if (underscore.join('') === word) {
