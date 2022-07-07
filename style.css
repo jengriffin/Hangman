@@ -6,12 +6,13 @@
   font-size: 30px;
 }
 a:visited{
-  color:#ff9668
+  color:#ff7b41;
   }
 a:link{
   display: flex;
   justify-content: center;
   font-size: 10vh;
+  align-self: center;
 }
 a:hover {
   color: 	#ff5994;
