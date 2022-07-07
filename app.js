@@ -138,9 +138,6 @@ let randomWord = () => {
 let getUnderscores = () => {
   answerArray[0].innerHTML = randomWord().join(' ')
 }
-// let getNewWord = () => {
-//   window.location.reload()
-// }
 getUnderscores()
 getWordbtn.addEventListener('click', getUnderscores)
 //run game with click
@@ -151,14 +148,12 @@ document.addEventListener('click', (event) => {
     return
   }
   event.target.setAttribute('class', 'guessed')
-  console.log(event)
   ///if guess right
 
   if (word.indexOf(letter) > -1) {
     console.log(underscore)
     correctWord.push(letter)
     console.log(correctWord)
-    //TODO: fix
     underscore[word.indexOf(letter)] = letter
     answerArray[0].innerHTML = underscore.join(' ')
     if (underscore.join('') === word) {

@@ -14,7 +14,10 @@
 
 ### **_Description_**
 
-This hangman game will be structured to support early literacy skills such as capital letter recognization and alphabetical order, and early technology and devices skills such as mouse control, single click. The words will be taken from the 100 most frequently read encountered words for kindergarten.
+This hangman game will be structured to support early literacy skills such as capital letter recognization and alphabetical order, and early technology and devices skills such as mouse control, single click. The words will be taken from the most frequently read encountered words for kindergarten. High contrast colors, straight font styling and various element sizes make important features stand out for learners new to digital interactions and those with various levels of visual acuity. While mouse control is a skill we want to encourage the option to use a keyboard is given for learners who want to build keyboard awareness and those with motor disabilties.
+In version 1 bugs include:
+Letters with repeated letters are not able to win as interations after the initial occurrence are not placed in the answer array and are counted as incorrect input.
+Capital letters are not allowed.
 
 ---
 
@@ -28,7 +31,7 @@ This hangman game will be structured to support early literacy skills such as ca
 
 ### **_Getting Started_**
 
-#### ** A trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/AaxH1E0d/hangman). The project was deployed and can be viewed [here](http://www.duckduckgo.com)**
+#### ** A trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/AaxH1E0d/hangman). The project was deployed and can be viewed [here](https://robust-boasts.surge.sh/)**
 
 ---
 
@@ -44,4 +47,4 @@ This hangman game will be structured to support early literacy skills such as ca
 
 #### **stickfigure CSS:(https://css-tricks.com/the-shapes-of-css/)**
 
-#### **Game reset:(https://www.codegrepper.com/code-examples/html/adding+a+refresh+button+on+the+page+using+javascript)**
+#### **Game reset:(https://linuxhint.com/create-link-using-javascript/)**
