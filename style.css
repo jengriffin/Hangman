@@ -2,25 +2,36 @@
 
 *{
   font-family: 'Architects Daughter', cursive;
-  background-color:rgb(130,182,255);
+  background-color:	#82b6ff;
   font-size: 30px;
 }
 
+
 a:visited{
   color:#ff7b41;
+  justify-content:center;
+  }
+  .welcome{
+font-size: 10vh;
   }
 a:link{
   display: flex;
-  justify-content: center;
-  font-size: 10vh;
-  align-self: center;
+  justify-content:center;
+  
+
 }
 a:hover {
   color: 	#ff5994;
 }
+#gameOver{
+  font-size: 8vh;
+  justify-self: start;
+  
+}
 img:hover {
   transform: scaleX(-1);
 }
+
 h1{
   text-align: center;
   font-size: 10vh;
@@ -53,11 +64,10 @@ width: 100px;
   height: 100px;
   background: black;
   border-radius: 50%;
-  display: block;
   position: absolute;
-  top: 200px;
+  top: 35vh;
   left: 156px;
-  display: none;
+  /* display: none; */
 }
 #torso{
   width: 6px;
@@ -65,18 +75,18 @@ width: 100px;
   border: 3px solid black;
   background-color: black;
   position: absolute;
-  top: 300px;
+  top: 44vh;
   left: 200px;
-  display: none;
+  /* display: none; */
 }
 #leftarm{
   width: 100px;
   height: 6px;
   border: 3px solid black;
   background-color: black;
-  display: none;
+  /* display: none; */
   position: absolute;
-  top: 330px;
+  top: 47vh;
   left: 100px;
   transform: rotate(-20deg);
 }
@@ -85,9 +95,9 @@ width: 100px;
   height: 6px;
   border: 3px solid black;
   background-color: black;
-  display: none;
+  /* display: none; */
   position: absolute;
-  top: 330px;
+  top: 47vh;
   left: 200px;
   transform: rotate(20deg);
 }
@@ -96,9 +106,9 @@ width: 100px;
   height: 6px;
   border: 3px solid black;
   background-color: black;
-  display: none;
+  /* display: none; */
   position: absolute;
-  top: 435px;
+  top: 57vh;
   left: 120px;
   transform: rotate(-50deg);
 }
@@ -107,22 +117,13 @@ width: 100px;
   height: 6px;
   border: 3px solid black;
   background-color: black;
-  display: none;
+  /* display: none; */
   position: absolute;
-  top: 435px;
+  top: 57vh;
   left: 188px;
   transform: rotate(50deg);
 }
-#bScaffold{
-  width: 100px;
-  height: 6px;
-  border: 3px solid black;
-  background-color: black;
-  position: absolute;
-  top: 435px;
-  left: 188px;
-  transform: rotate(180deg);
-}
+
 .guessed{
   background-color: 	#84ff9f;
   border: 5px solid #ff9668;

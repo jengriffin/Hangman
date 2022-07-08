@@ -103,7 +103,6 @@ const sightWords = [
 let correctWord = []
 let wrongWord = []
 let underscore = []
-let gameLose = 6
 let answerArray = document.getElementsByClassName('answerArray')
 let word
 let circle = document.getElementById('head')
@@ -122,7 +121,6 @@ a.href = 'hangman.html'
 const getWordbtn = document.getElementById('btnword')
 
 //Choosing the word from the sight words
-
 // generating the mystery word
 
 let randomWord = () => {
