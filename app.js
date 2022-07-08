@@ -120,19 +120,17 @@ const winRestartLink = document.createTextNode('You win! Play Again?')
 const loseRestartLink = document.createTextNode('Play Again?')
 a.href = 'hangman.html'
 
-//Choosing the word from the sight words
+// Choosing the word from the sight words
 // generating the mystery word
-
 let randomWord = () => {
   underscore = []
   word = sightWords[Math.floor(Math.random() * sightWords.length)]
   for (let i = 0; i < word.length; i++) {
     underscore.push('_')
   }
-  console.log(word)
-  console.log(underscore)
   return underscore
 }
+
 let getUnderscores = () => {
   answerArray[0].innerHTML = randomWord().join(' ')
 }
@@ -140,12 +138,10 @@ let getUnderscores = () => {
 let clickEvent = (event) => {
   let letter = event.target.id.toLowerCase()
   event.target.setAttribute('class', 'guessed')
-  ///if guess right
 
+  // if guess right
   if (word.indexOf(letter) > -1) {
-    console.log(underscore)
     correctWord.push(letter)
-    console.log(correctWord)
     underscore[word.indexOf(letter)] = letter
     answerArray[0].innerHTML = underscore.join(' ')
     if (underscore.join('') === word) {
@@ -156,7 +152,6 @@ let clickEvent = (event) => {
     // draw hangman
   } else {
     wrongWord.push(letter)
-    console.log(wrongWord)
     if (wrongWord.length === 1) {
       circle.style.display = 'inline'
     }
@@ -182,33 +177,29 @@ let clickEvent = (event) => {
 
 getUnderscores()
 
-//run game with click
+// run game with click
 vowels.forEach((vowel) => {
   vowel.addEventListener('click', clickEvent)
 })
 consonants.forEach((consonant) => {
   consonant.addEventListener('click', clickEvent)
 })
-//run game with keystrokes
+
+// run game with keystrokes
 document.addEventListener('keypress', (event) => {
   let key = String.fromCharCode(event.keyCode)
-  ///if guess right
 
+  // if guess right
   if (word.indexOf(key) > -1) {
-    console.log(underscore)
     correctWord.push(key)
-    console.log(correctWord)
     underscore[word.indexOf(key)] = key
     answerArray[0].innerHTML = underscore.join(' ')
     if (underscore.join('') === word) {
       a.appendChild(winRestartLink)
       gameOver.appendChild(a)
     }
-
-    // }
   } else {
     wrongWord.push(key)
-    console.log(wrongWord)
     if (wrongWord.length === 1) {
       circle.style.display = 'inline'
     }
