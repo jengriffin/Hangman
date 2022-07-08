@@ -112,13 +112,13 @@ let rightarm = document.getElementById('rightarm')
 let leftleg = document.getElementById('leftleg')
 let rightleg = document.getElementById('rightleg')
 let keyboard = document.getElementsByClassName('keyboard')
+let vowels = document.querySelectorAll('.vowel')
+let consonants = document.querySelectorAll('.consonant')
 let gameOver = document.getElementById('gameOver')
 const a = document.createElement('a')
 const winRestartLink = document.createTextNode('You win! Play Again?')
 const loseRestartLink = document.createTextNode('Play Again?')
 a.href = 'hangman.html'
-//get word button
-const getWordbtn = document.getElementById('btnword')
 
 //Choosing the word from the sight words
 // generating the mystery word
@@ -136,15 +136,9 @@ let randomWord = () => {
 let getUnderscores = () => {
   answerArray[0].innerHTML = randomWord().join(' ')
 }
-getUnderscores()
-getWordbtn.addEventListener('click', getUnderscores)
-//run game with click
-document.addEventListener('click', (event) => {
+
+let clickEvent = (event) => {
   let letter = event.target.id.toLowerCase()
-  if (letter === getWordbtn.id.toLowerCase()) {
-    getUnderscores()
-    return
-  }
   event.target.setAttribute('class', 'guessed')
   ///if guess right
 
@@ -184,6 +178,16 @@ document.addEventListener('click', (event) => {
       gameOver.appendChild(a)
     }
   }
+}
+
+getUnderscores()
+
+//run game with click
+vowels.forEach((vowel) => {
+  vowel.addEventListener('click', clickEvent)
+})
+consonants.forEach((consonant) => {
+  consonant.addEventListener('click', clickEvent)
 })
 //run game with keystrokes
 document.addEventListener('keypress', (event) => {
