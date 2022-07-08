@@ -7,19 +7,27 @@
 }
 
 a:visited{
-  color:#ff7b41;
+  color:#ff7335;
   justify-content:center;
   text-decoration: none;
 }
 .welcome{
   font-size: 10vh;
 }
-
+.homeLink{
+  font-size: 10vh;
+}
+#btnword{
+  background-color: #76abf3;
+  color: black;
+}
+#btnword:hover{
+  background-color: #84ff9f;
+}
 a:link{
   display: flex;
   justify-content:center;
   text-decoration: none;
-
 }
 a:hover {
   color: 	#ff5994;
@@ -147,4 +155,13 @@ img:hover {
   border-radius: 20px;
   padding: 15px;
   top: 500px;
+}
+button{
+  border-radius: 12px;
+  background-color: #76abf3;
+  border: 2px solid #ff448e;
+}
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #84ff9f;
 }

@@ -48,3 +48,5 @@ Capital letters are not allowed.
 #### **stickfigure CSS:(https://css-tricks.com/the-shapes-of-css/)**
 
 #### **Game reset:(https://linuxhint.com/create-link-using-javascript/)**
+
+#### **Button Shadow:(https://www.w3schools.com/css/css3_buttons.asp)**
