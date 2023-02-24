@@ -190,7 +190,7 @@ document.addEventListener('keypress', (event) => {
   let key = String.fromCharCode(event.keyCode)
 
   // if guess right
-  if (word.indexOf(key) > -1) {
+  if (word.indexOf(key) >= 0) {
     correctWord.push(key)
     underscore[word.indexOf(key)] = key
     answerArray[0].innerHTML = underscore.join(' ')

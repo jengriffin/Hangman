@@ -8,7 +8,7 @@
 
 ### By: Jennifer Griffin
 
-[GitHub](https://github.com/jengriffin) [LinkedIn](https://www.linkedin.com/in/jennifer-griffin-1223211b8/)
+[GitHub](https://github.com/jengriffin) [LinkedIn](https://www.linkedin.com/in/jennifer-griffin-12/)
 
 ---
 
