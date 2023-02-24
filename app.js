@@ -125,6 +125,7 @@ a.href = 'hangman.html'
 let randomWord = () => {
   underscore = []
   word = sightWords[Math.floor(Math.random() * sightWords.length)]
+  console.log(word)
   for (let i = 0; i < word.length; i++) {
     underscore.push('_')
   }
@@ -140,7 +141,7 @@ let clickEvent = (event) => {
   event.target.setAttribute('class', 'guessed')
 
   // if guess right
-  if (word.indexOf(letter) > -1) {
+  if (word.indexOf(letter) >= 0) {
     correctWord.push(letter)
     underscore[word.indexOf(letter)] = letter
     answerArray[0].innerHTML = underscore.join(' ')
