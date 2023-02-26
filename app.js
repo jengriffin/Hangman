@@ -142,7 +142,7 @@ let clickEvent = (event) => {
 
   // if guess right
   if (word.indexOf(letter) >= 0) {
-    correctWord.push(letter)
+    // correctWord.push(letter)
     underscore[word.indexOf(letter)] = letter
     answerArray[0].innerHTML = underscore.join(' ')
     if (underscore.join('') === word) {
