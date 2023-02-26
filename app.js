@@ -144,6 +144,8 @@ let clickEvent = (event) => {
   if (word.indexOf(letter) >= 0) {
     // correctWord.push(letter)
     underscore[word.indexOf(letter)] = letter
+
+    answerArray[0].innerHTML =letter
     answerArray[0].innerHTML = underscore.join(' ')
     if (underscore.join('') === word) {
       a.appendChild(winRestartLink)
