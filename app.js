@@ -141,17 +141,19 @@ let clickEvent = (event) => {
   event.target.setAttribute('class', 'guessed')
 
   // if guess right
+
   if (word.indexOf(letter) >= 0) {
-    // correctWord.push(letter)
-    underscore[word.indexOf(letter)] = letter
-
-    answerArray[0].innerHTML =letter
-    answerArray[0].innerHTML = underscore.join(' ')
-    if (underscore.join('') === word) {
-      a.appendChild(winRestartLink)
-      gameOver.appendChild(a)
+    for (let i = 0; i < word.length; i++) {
+      if (word[i]===letter){
+        underscore[i]= letter
+      }
+      answerArray[0].innerHTML = letter
+      answerArray[0].innerHTML = underscore.join(' ')
+      if (underscore.join('') === word) {
+        a.appendChild(winRestartLink)
+        gameOver.appendChild(a)
+      }
     }
-
     // draw hangman
   } else {
     wrongWord.push(letter)
