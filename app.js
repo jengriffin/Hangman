@@ -191,39 +191,46 @@ consonants.forEach((consonant) => {
 })
 
 // run game with keystrokes
-document.addEventListener('keypress', (event) => {
+//event.target.setAttribute('class', 'guessed')
+document.addEventListener('keypress',
+    (event) => {
   let key = String.fromCharCode(event.keyCode)
 
   // if guess right
   if (word.indexOf(key) >= 0) {
-    correctWord.push(key)
-    underscore[word.indexOf(key)] = key
-    answerArray[0].innerHTML = underscore.join(' ')
-    if (underscore.join('') === word) {
-      a.appendChild(winRestartLink)
-      gameOver.appendChild(a)
+    for (let i = 0; i < word.length; i++) {
+      if (word[i] === key) {
+        underscore[i] = key
+      }
     }
-  } else {
-    wrongWord.push(key)
-    if (wrongWord.length === 1) {
-      circle.style.display = 'inline'
-    }
-    if (wrongWord.length === 2) {
-      torso.style.display = 'inline'
-    }
-    if (wrongWord.length === 3) {
-      leftarm.style.display = 'inline'
-    }
-    if (wrongWord.length === 4) {
-      rightarm.style.display = 'inline'
-    }
-    if (wrongWord.length === 5) {
-      leftleg.style.display = 'inline'
-    }
-    if (wrongWord.length === 6) {
-      rightleg.style.display = 'inline'
-      a.appendChild(loseRestartLink)
-      gameOver.appendChild(a)
+      answerArray[0].innerHTML = underscore.join(' ')
+      if (underscore.join('') === word) {
+        a.appendChild(winRestartLink)
+        gameOver.appendChild(a)
+      }
+    }else
+    {
+      wrongWord.push(key)
+      if (wrongWord.length === 1) {
+        circle.style.display = 'inline'
+      }
+      if (wrongWord.length === 2) {
+        torso.style.display = 'inline'
+      }
+      if (wrongWord.length === 3) {
+        leftarm.style.display = 'inline'
+      }
+      if (wrongWord.length === 4) {
+        rightarm.style.display = 'inline'
+      }
+      if (wrongWord.length === 5) {
+        leftleg.style.display = 'inline'
+      }
+      if (wrongWord.length === 6) {
+        rightleg.style.display = 'inline'
+        a.appendChild(loseRestartLink)
+        gameOver.appendChild(a)
+      }
     }
   }
-})
+)
