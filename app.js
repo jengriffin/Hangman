@@ -191,11 +191,12 @@ consonants.forEach((consonant) => {
 })
 
 // run game with keystrokes
-//event.target.setAttribute('class', 'guessed')
-document.addEventListener('keypress',
-    (event) => {
+
+document.addEventListener('keypress', (event) => {
   let key = String.fromCharCode(event.keyCode)
 
+  let keyElement = document.getElementById(key.toUpperCase())
+    keyElement.setAttribute('class', 'guessed')
   // if guess right
   if (word.indexOf(key) >= 0) {
     for (let i = 0; i < word.length; i++) {
